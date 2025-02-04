@@ -31,7 +31,7 @@ a particular role. */
 /* Output for each update  single line containing an integer. The value on the
 line should be the total amount of magic required by everyone in the Greak Oak
 School of Magic after the corresponding update. */
-// This program will not print the intial magic required.
+// This program will not print the initial magic required.
 
 /*
 2 - 
