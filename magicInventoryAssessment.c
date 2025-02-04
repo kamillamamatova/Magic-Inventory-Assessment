@@ -321,3 +321,21 @@ int main(){
     
     scanf("%d", &amount_updates);
     
+    for(int i = 0; i < sizeof(updates); i++){
+        scanf("")
+    }
+    
+    if (mag == mag_mat_user){
+        
+    }
+    
+    //
+    mag_mat_for_list = mag_mat_for_role.amount_needed +;
+    printf("%li", total) 
+    
+    // free memory
+    free();
+    
+    // Exit
+    return 0;
+}
