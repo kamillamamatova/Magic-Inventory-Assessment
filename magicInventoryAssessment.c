@@ -96,3 +96,91 @@ Plutonium 5
 /*
 290
 */
+#include <stdio.h>
+#include <string.h>
+#include <std.lib>
+
+/*struct mag_mat_for_role {
+    int type ; // index into the list of magical materials
+    long long amount_needed ;
+};
+
+struct role {
+    int materials_needed ;
+    mag_mat_for_role * item_list ;
+};
+
+struct mag_mat_for_list {
+    char * mat_name ;
+    long long total_amount_needed;
+    long long magic_required ;
+};*/
+
+struct role {
+    int count;
+    int num_items;
+    int * indices;
+    int * amount;
+};
+
+struct mat {
+    char * name;
+    long long int total;
+    long long int mag_per;
+};
+
+struct matArrayList {
+    mat * array;
+    int size, cap;
+};
+
+// Prototypes
+// Dynamic array that will store magical materials
+matArrayList * createMatArrayList();
+/* Searches the MatArrayList for a magical material 
+by its name and returns its index */
+int find(matArrayList * list, char * name);
+// Adds a new magical material to the MatArrayList
+void append(matArrayList * list, char * name);
+
+// Main function
+int main(){
+    
+    int role_count;
+    // Read in number of roles
+    scanf("%d", &role_count);
+    
+    // Array of roles
+    struct role *roles = (struct role *)malloc(sizeof(role_count * struct role));
+    
+    // Array list of materials
+    struct matArrayList *materials = createMatArrayList();
+    
+    // Iterate through roles and read them in 
+    for (int i = 0; i < roles.count; i++){
+        // Read in the number of materials needed for this role
+        scanf("%d", &roles.num_items[i]);
+        // Allocate room in the current role
+        // ??
+        roles[i].indices = (int *)malloc(roles.num_items * sizeof(int));
+        roles[i].amount = (int *)malloc(role.num_items * sizeof(int));
+        roles[i].coumt = 0;
+        // Loop through the needed materials and add them
+        for (int j = 0; j < roles.num_items; j++){
+            // Read in the name and the required number
+            scanf("%c", " ", "%d", mat.name, &role.*amount);
+            // Find the index of the material based on the name
+            int matIndex = find(materials, materials.name);
+            //??
+            if (matIndex == -1){
+                // Add the materials name into the matrial list (matArrayList)
+                append(materials, materials.name);
+                matIndex = materials->size - 1;
+            }
+            // ??
+            // Store the material index and amount in the role
+            roles[i].indices[i] = matIndex;
+            role[i].amount[j] = roles.amount;
+        }
+    }
+    
