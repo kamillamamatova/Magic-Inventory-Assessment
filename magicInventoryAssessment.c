@@ -298,3 +298,26 @@ int main(){
         // Print the reslting answer
         printf("%lld\n", total_magic);
     }
+    
+    free()
+    
+    for (int i = 0; i < role.material_needed; i++){
+        scanf("%c", &mag_mat_for_list.mat_name[i]);
+        for (int j = 0; j < role.materials_needed; j++){
+            scanf(" ", "%d", &)
+        }
+    }
+    // Output
+    long long int total = 0;
+    
+    // How many people
+    int people;
+    scanf("%d", &people);
+    
+    int assign_role;
+    for (int i = 0; i < people; i++){ //assign_role[i] != '\0'
+        scanf(" ", "%d", &assign_role[i]);
+    }
+    
+    scanf("%d", &amount_updates);
+    
