@@ -245,3 +245,56 @@ int main(){
         }
     }
     
+    /*// Calculate initial total magic required
+    long long int total_magic = 0;
+    for (int i = 0; i < materials->size; i++) {
+        total_magic += materials->array[i].total * materials->array[i].mag_per;
+    }*/
+    
+    int numUpdates;
+    // Read in the number of updates
+    scanf("%d", &numUpdates);
+    
+    // Loop through all the updates
+    for (int i = 0; i < numUpdates; i++){
+        int update;
+        // Read in the update
+        scanf("%d", &update);
+        // Check the update type
+        if (update == 1){
+            char material.name[101];
+            // ??
+            long long int newMagPer;
+            // Read in the material name and magic requirement
+            scanf("%s %lld", material.name, &newMagPer);
+            
+            // Find the index of the material
+            updateMagicRequired(materials, material.name, newMagPer);
+            
+            // Update the material
+            
+        }
+        else if (update == 2){
+            // Read in the role
+            int roleIndex;
+            // Read in the material name
+            char material.name[101];
+            // Read in the new amount
+            int new_amount;
+            
+            scanf("%d %c %d", &roleIndex, material.name, &new_amount);
+            roleIndex--;
+            
+            // Find the index of the material
+            int matIndex = find(materials, materials.name);
+            // Find the index of the role
+            // roles.count??
+            int roleIndex = find(roles, roles.count)
+            // Update the answer
+            // Update the amount of this item needed
+            // ??
+            updateRoleMaterial(&roles[roleIndex], matIndex, new_amount);
+        }
+        // Print the reslting answer
+        printf("%lld\n", total_magic);
+    }
