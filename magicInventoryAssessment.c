@@ -184,3 +184,64 @@ int main(){
         }
     }
     
+    // Loop until a new line is encountered
+    while (roles.num_items != '\n' && mat.name != '\n'){
+        // Iterate through roles and read them in 
+        for (int i = 0; i < roles.count; i++){
+            // Read in the number of materials needed for this role
+            scanf("%d", &roles.num_items[i]);
+            // Allocate room in the current role
+            // ??
+            roles[i].indices = (int *)malloc(roles.num_items * sizeof(int));
+            roles[i].amount = (int *)malloc(role.num_items * sizeof(int));
+            roles[i].coumt = 0;
+            // Loop through the needed materials and add them
+            for (int j = 0; j < roles.num_items; j++){
+                // Read in the name and the required number
+                scanf("%c", " ", "%d", mat.name, &role.*amount);
+                // Find the index of the material based on the name
+                int matIndex = find(materials, materials.name);
+                //??
+                if (matIndex == -1){
+                    // Add the materials name into the matrial list (matArrayList)
+                    append(materials, materials.name);
+                    matIndex = materials->size - 1;
+                }
+                // ??
+                // Store the material index and amount in the role
+                roles[i].indices[i] = matIndex;
+                role[i].amount[j] = roles.amount;
+            }
+        }
+    }
+    
+    /*// Read the magic requirements for each material
+    for (int i = 0; i < materials->size; i++) {
+        long long int mag_required;
+        scanf("%lld", &mag_required);
+        materials->array[i].mag_per = mag_required;
+    }*/
+    
+    //int numPeople;
+    // Read in the number of people
+    scanf("%d", &roles.count);
+    
+    // Iterate through all people
+    for (int i = 0; i < roles.count; i++){
+        int roleIndex;
+        // Read in the role of this current person
+        scanf("%d", &roleIndex);
+        // ??
+        roleIndex--;
+        // Update the count for the role
+        roles[roleIndex].count++;
+        // Loop through all the materials types needed by the current role 
+        for (int j = 0; j < roles[roleIndex].num_items; j++){
+            // Get the index of this ite,
+            int matIndex = roles[roleIndex].indices[j];
+            int matAmount = roles[roleIndex].amount[j];
+            // ??
+            materials->array[matIndex].total += mat_amount;
+        }
+    }
+    
